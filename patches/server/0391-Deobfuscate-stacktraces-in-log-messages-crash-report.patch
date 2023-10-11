@@ -6,11 +6,11 @@ Subject: [PATCH] Deobfuscate stacktraces in log messages, crash reports, and
 
 
 diff --git a/build.gradle.kts b/build.gradle.kts
-index 2f32a91bea8c27eb1f768e8a2a876a081cd68de8..8d40814519e777182e95d8f48c02fa0e606a551f 100644
+index 5d344ac5a02ca5cf4dd162aaf8d70a755cc70dcc..fd50a05bf573d975004f6e740a556d24365ec528 100644
 --- a/build.gradle.kts
 +++ b/build.gradle.kts
-@@ -37,6 +37,7 @@ dependencies {
-     testImplementation("org.mockito:mockito-core:4.9.0") // Paper - switch to mockito
+@@ -36,6 +36,7 @@ dependencies {
+     implementation("org.ow2.asm:asm-commons:9.5") // Paper - ASM event executor generation
      implementation("org.spongepowered:configurate-yaml:4.2.0-SNAPSHOT") // Paper - config files
      implementation("commons-lang:commons-lang:2.6")
 +    implementation("net.fabricmc:mapping-io:0.3.0") // Paper - needed to read mappings for stacktrace deobfuscation
